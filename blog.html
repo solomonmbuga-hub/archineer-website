@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <title>Insights & Articles | Archineer Uganda LLP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            charcoal: '#121214',
+            navy: '#0B1320',
+            darkgrey: '#1A1A1D',
+            accent: '#436850', // Professional green undertone
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #121214; }
+    ::-webkit-scrollbar-thumb { background: #436850; border-radius: 4px; }
+    .blueprint-grid {
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
+</head>
+
+<body class="bg-charcoal text-gray-200 font-normal antialiased selection:bg-accent selection:text-white">
+
+<header class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-charcoal/90 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/images/logo.png" alt="Archineer Uganda LLP Logo" class="h-14 w-auto brightness-200">
+    </a>
+
+    <nav class="hidden lg:flex gap-8 text-xs md:text-sm tracking-widest text-gray-300 uppercase font-medium">
+      <a href="index.html#about" class="hover:text-accent transition-colors">About</a>
+      <a href="index.html#values" class="hover:text-accent transition-colors">Values</a>
+      <a href="index.html#services" class="hover:text-accent transition-colors">Services</a>
+      <a href="index.html#projects" class="hover:text-accent transition-colors">Projects</a>
+      <a href="index.html#team" class="hover:text-accent transition-colors">Team</a>
+      <a href="blog.html" class="text-accent transition-colors">Blog</a>
+      <a href="index.html#contact" class="hover:text-accent transition-colors border border-accent px-4 py-2 ml-4">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="pt-40 pb-20 bg-navy relative blueprint-grid border-b border-white/5">
+    <div class="absolute inset-0 bg-navy/90"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+        <h2 class="text-sm font-bold tracking-[0.2em] text-accent uppercase mb-4">The Journal</h2>
+        <h1 class="text-4xl md:text-6xl font-display font-black text-white uppercase tracking-tighter mb-6">
+            Insights & <span class="text-accent">Execution</span>
+        </h1>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+            Thoughts on structural integrity, architectural trends, and on-site realities from the team at Archineer Uganda LLP.
+        </p>
+    </div>
+</section>
+
+<section class="py-24 bg-charcoal">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <article class="bg-darkgrey border border-white/5 hover:border-accent/50 transition-all duration-500 group flex flex-col">
+            <div class="h-56 w-full overflow-hidden relative">
+                <div class="absolute top-4 left-4 z-10 bg-accent text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1">
+                    Design
+                </div>
+                <img src="assets/images/site/site-05.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105" alt="Blog Post Image">
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+                <div class="flex items-center gap-3 text-xs tracking-widest text-gray-500 uppercase mb-4">
+                    <span>Oct 12, 2026</span>
+                    <span class="h-1 w-1 bg-gray-500 rounded-full"></span>
+                    <span>By S.M. Mbuga</span>
+                </div>
+                <h3 class="text-2xl font-display font-bold text-white mb-4 group-hover:text-accent transition-colors">
+                    BUILDING IN THE DARK: 
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
+                    Why Architecture Eludes Critique <a href="building-in-the-dark.html">
+                </p>
+                <a href="#" class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-white uppercase hover:text-accent transition-colors mt-auto">
+                    Read Article <a href="building-in-the-dark.html">
+                    <span class="text-accent">→</span>
+                </a>
+            </div>
+           </div>
+
+    <div class="mt-20 text-center">
+        <button class="border border-white/20 text-white px-10 py-4 text-sm tracking-widest uppercase font-bold hover:bg-accent hover:border-accent transition-all duration-300">
+            Load More Articles
+        </button>
+    </div>
+
+  </div>
+</section>
+
+<footer class="bg-black text-gray-500 py-10 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs tracking-widest uppercase font-medium">
+    <p>© 2026 Archineer Uganda LLP. All rights reserved.</p>
+    <div class="flex gap-6 mt-4 md:mt-0">
+        <a href="#" class="hover:text-white">Instagram</a>
+        <span>System: Operational</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
