@@ -65,25 +65,45 @@
 <header class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-charcoal/90 border-b border-white/10">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     
+    <!-- Logo -->
     <a href="index.html" class="flex items-center gap-3">
       <img src="assets/images/logo.png" alt="Archineer Uganda LLP Logo" class="h-10 md:h-14 w-auto brightness-200">
     </a>
 
+    <!-- Desktop Nav -->
     <nav class="hidden lg:flex gap-8 text-xs tracking-widest text-gray-300 uppercase font-medium items-center">
-      <a href="index.html#about" class="hover:text-accent transition-colors">About</a>
-      <a href="index.html#values" class="hover:text-accent transition-colors">Values</a>
-      <a href="index.html#services" class="hover:text-accent transition-colors">Services</a>
-      <a href="index.html#projects" class="hover:text-accent transition-colors">Projects</a>
-      <a href="index.html#team" class="hover:text-accent transition-colors">Team</a>
+      <a href="#about" class="hover:text-accent transition-colors">About</a>
+      <a href="#values" class="hover:text-accent transition-colors">Values</a>
+      <a href="#services" class="hover:text-accent transition-colors">Services</a>
+      <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+      <a href="#team" class="hover:text-accent transition-colors">Team</a>
       <a href="blog.html" class="hover:text-accent transition-colors">Blog</a>
+      <a href="#contact" class="border border-accent px-4 py-2 hover:bg-accent hover:text-charcoal transition-all">Contact</a>
     </nav>
 
-    <a href="index.html#contact" class="text-[10px] md:text-xs tracking-widest text-white uppercase font-bold hover:text-charcoal hover:bg-accent transition-all duration-300 border border-accent px-4 py-2">
-      Contact
-    </a>
+    <!-- Mobile Hamburger -->
+    <button id="menu-btn" class="lg:hidden text-white focus:outline-none">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
 
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-charcoal border-t border-white/10">
+    <div class="flex flex-col px-6 py-6 space-y-6 text-sm uppercase tracking-widest text-gray-300 font-medium">
+      <a href="#about" class="hover:text-accent">About</a>
+      <a href="#values" class="hover:text-accent">Values</a>
+      <a href="#services" class="hover:text-accent">Services</a>
+      <a href="#projects" class="hover:text-accent">Projects</a>
+      <a href="#team" class="hover:text-accent">Team</a>
+      <a href="blog.html" class="hover:text-accent">Blog</a>
+      <a href="#contact" class="border border-accent px-4 py-2 text-center hover:bg-accent hover:text-charcoal transition-all">Contact</a>
+    </div>
   </div>
 </header>
+
 
 <section class="relative h-screen w-full overflow-hidden bg-black flex items-center justify-center">
   <div class="absolute inset-x-0 top-0 z-0 h-full bg-black">
@@ -453,6 +473,14 @@
     reveals.forEach(reveal => {
       revealOnScroll.observe(reveal);
     });
+  });
+</script>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
   });
 </script>
 
